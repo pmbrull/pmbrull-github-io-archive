@@ -1,11 +1,16 @@
 ---
-layout: archive
+layout: article
+title:  "Main"
+feature: /images/teaser.gif
+date:   2018-03-06
 permalink: /
-title: "Latest Posts"
+author: false
+share: false
 ---
 
-<div class="tiles">
-{% for post in site.posts %}
-	{% include post-grid.html %}
-{% endfor %}
-</div><!-- /.tiles -->
+<div class="FeaturedImgBanner" {% if page.feature %} style="background-image: url('{{ page.feature }}');" {% endif %}>
+    <!-- Include your post title, byline, date, and other info inside the header here. -->
+    <h3>Main</h3>
+</div>
+
+blah blah blah

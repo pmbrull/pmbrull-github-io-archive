@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: archive
 title:  "My portfolio"
 date:   2018-06-03
 categories: portfolio
