@@ -1,9 +1,9 @@
 # Site wide configuration
 
-title: "pmbull"
-description: "This is a description of my awesome site."
+title: "pmbrull"
+description: "Data Science and Management blog :)"
 logo: # 120x120 px default image used for Twitter summary card
-teaser: # 400x250 px default teaser image used in image archive grid
+teaser: teaser.gif
 locale: en
 url:
 feed:
@@ -41,6 +41,8 @@ owner:
 
 include:
   - .htaccess
+  - _pages
+  - _posts
 exclude:
   - "*.less"
   - "*.sublime-project"

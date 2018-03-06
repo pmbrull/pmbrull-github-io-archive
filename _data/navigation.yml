@@ -1,6 +1,6 @@
 # Site navigation links
 
-- title:
-  url:
-  excerpt:
+- title: Portfolio
+  url: /portfolio/
+  excerpt: "Things I've developed, struggled with or find interesting enough to share."
   image:
