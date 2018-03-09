@@ -23,6 +23,7 @@
 	@include media($large) {
 		@include span-columns(4);
 	}
+
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
 	height: $masthead-height;
 	text-decoration: none;
@@ -62,7 +63,7 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				height: 2px;
+				height: 3px;
 				@include transition(width 0.3s);
 			}
 			&:before {

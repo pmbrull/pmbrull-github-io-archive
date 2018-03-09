@@ -18,6 +18,7 @@ sass:
 permalink: /:categories/:title/
 kramdown:
   toc_levels: 1..2
+markdown: kramdown
 highlighter: rouge
 gems:
   - jekyll-sitemap
@@ -43,6 +44,7 @@ include:
   - .htaccess
   - _pages
   - _posts
+
 exclude:
   - "*.less"
   - "*.sublime-project"

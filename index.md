@@ -7,10 +7,11 @@ author: false
 share: false
 ---
 
-<div class="FeaturedImgBanner" {% if page.feature %} style="background-image: url('{{ page.feature }}');" {% endif %}>
-    <!-- Include your post title, byline, date, and other info inside the header here. -->
-</div>
-
 ![png]({{ "/images/banner1.png" | absolute_url }})
 
+I'm a link
+### [Spark Series]({% link _pages/spark-series.md %}) 
+
+I'm a button
+### [Spark Series]({% link _pages/spark-series.md %}){: .btn-inverse}
 blah blah blah
