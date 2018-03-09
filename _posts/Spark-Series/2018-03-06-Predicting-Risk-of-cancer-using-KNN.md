@@ -2,7 +2,7 @@
 layout: article
 title:  "Predicting Risk of cancer using KNN"
 date:   2018-03-08
-categories: Spark-Series
+categories: spark-series
 mathjax: true
 plotly: true
 ---

@@ -2,7 +2,7 @@
 layout: article
 title:  "Spark GraphFrames I"
 date:   2018-03-08
-categories: Spark-Series
+categories: spark-series
 ---
 
 ## Getting Ready
