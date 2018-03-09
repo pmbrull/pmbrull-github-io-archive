@@ -18,6 +18,8 @@ Note: These are the issues found when installing and running graphframes in Wind
 1. First of all, download Spark from this [link](https://spark.apache.org/downloads.html). I just got the fresh Spark 2.3. I have it placed inside ```C:\```, so I will be using it as path example. Remember to set all options and paths to be able to use Pyspark with Jupyter.
 2. Now, download **graphframes** package from the Spark packages [site](https://spark-packages.org/package/graphframes/graphframes). 
 3. Unzip it and check that you got the directory: ```\graphframes\python\graphframes```. Inside you should have the following structure:
+
+
 ```
 graphframes
 │   __init__.py
@@ -28,9 +30,13 @@ graphframes
 │ 
 └─── lib
 ```
+
+
 Copy this inside your the Spark directory: ```C:\Spark\spark-2.3.0-bin-hadoop2.7\python\pyspark```, where other modules like MLlib and Streaming are placed.
 
 4. Once you are set, run: ```pyspark --packages graphframes:graphframes:0.5.0-spark2.1-s_2.11```. You should see something like this
+
+
 ```
         ---------------------------------------------------------------------
         |                  |            modules            ||   artifacts   |
@@ -39,7 +45,10 @@ Copy this inside your the Spark directory: ```C:\Spark\spark-2.3.0-bin-hadoop2.7
         |      default     |   5   |   0   |   0   |   0   ||   5   |   0   |
         ---------------------------------------------------------------------
 ```
-However, here is where I found the first weird error. Spark could not locate nor download ```org.slf4j#slf4j-api;1.7.7 from local-m2-cache```. A fix for this is to download ```slf4j-api-1.7.7``` and place it under ``` C:\Users\Usuario\.m2\repository\org\slf4j\slf4j-api\1.7.7 ```. Please note that it is looking for version 1.7.7. I tried with newer ones but same problem appeared.
+
+
+However, here is where I found the first weird error. Spark could not locate nor download ```org.slf4j#slf4j-api;1.7.7 from local-m2-cache```. A fix for this is to download ```slf4j-api-1.7.7``` and place it under ```C:\Users\Usuario\.m2\repository\org\slf4j\slf4j-api\1.7.7 ```. Please note that it is looking for version 1.7.7. I tried with newer ones but same problem appeared.
+
 
 5. With these steps now you should be able to **import graphframes** modules. Nevertheless, fun goes on. Maybe I broke something when preparing the new Spark version, but I got a metastore_db and hive related error when creating the vertices and edges DataFrames. So let's give some attention to Hadoop now:
 
@@ -235,7 +244,7 @@ print(triplet[0])
     
 
 We have a Row of Rows. Thus, we can access all the data with the following structure:
-``` triplet[rowid][column_name][inner_column_name] ```, for example:
+```triplet[rowid][column_name][inner_column_name]```, for example:
 
 
 ```python
