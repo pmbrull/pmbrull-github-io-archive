@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /Recent-Posts/
+permalink: /recent-posts/
 title: "Recent Posts"
 ---
 
