@@ -5,8 +5,6 @@ date:   2018-03-08
 categories: Spark-Series
 ---
 
-# Spark GraphFrames
-
 ## Getting Ready
 
 Ok so, this has been quite a journey, and please disregard the *Quick* in Quick-Start as it's taken a few hours just to get the copy-paste example to work. Thus, I'm gonna write some steps down before I forget.
@@ -403,7 +401,7 @@ plot_graph(G.triplets.collect())
 ```
 
 
-![png](output_37_0.png)
+![png]({{ "/assets/sparkgf1.png" | absolute_url }})
 
 
 And we end up with the following subgraph:
@@ -414,7 +412,7 @@ plot_graph(motif2.collect())
 ```
 
 
-![png](output_39_0.png)
+![png]({{ "/assets/sparkgf2.png" | absolute_url }})
 
 
 ## Analyzing Wikipedia Articles Relevance
@@ -464,15 +462,15 @@ W = GF.GraphFrame(article_df, links_df)
 
 **PageRank** is one of the measures used by Google when listing web pages that indicates the web importance by accounting all the links refered to that specific page. Google paper citation:
 
-> We assume page A has pages $T_1, \ldots , T_n$ which point to it (i.e., are citations). The parameter $d$ is a damping factor which can be set between 0 and 1. We usually set $d$ to 0.85. Also $C(A)$ is defined as the number of links going out of page A. The PageRank $PR$ of a page A is given as follows:
+ We assume page A has pages $T_1, \ldots , T_n$ which point to it (i.e., are citations). The parameter $d$ is a damping factor which can be set between 0 and 1. We usually set $d$ to 0.85. Also $C(A)$ is defined as the number of links going out of page A. The PageRank $PR$ of a page A is given as follows:
 
-> $$PR(A) = (1 - d) + d \times (PR(T_1) / C(T_1) + \ldots + PR(T_n)/C(T_n)).$$
+ $$PR(A) = (1 - d) + d \times (PR(T_1) / C(T_1) + \ldots + PR(T_n)/C(T_n)).$$
 
-> Note that the PageRanks form a probability distribution over web pages, so the sum of all web pages' PageRanks will be one.
+ Note that the PageRanks form a probability distribution over web pages, so the sum of all web pages' PageRanks will be one.
 PageRank or $PR(A)$ can be calculated using a simple iterative algorithm, and corresponds to the principal eigenvector of the
 normalized link matrix of the web.
 
-> PageRank or $PR(A)$ can be calculated using a simple iterative
+ PageRank or $PR(A)$ can be calculated using a simple iterative
 algorithm, and corresponds to the principal eigenvector of the
 normalized link matrix of the web.
 
