@@ -1,9 +1,12 @@
 ---
 layout: article
-title:  "Spark GraphFrames I"
-date:   2018-03-08
+title: "Spark GraphFrames I"
+date: 2018-03-08
 categories: spark-series
+mathjax: true
 ---
+
+Some information on how to get the GraphFrames module up and running on Windows and showing its funcionalities with some examples.
 
 ## Getting Ready
 

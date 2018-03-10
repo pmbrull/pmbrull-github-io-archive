@@ -28,15 +28,17 @@ gems:
 
 
 # Site owner
-owner:
-  name:
+owner: 
+  name: PMBrull
+  linkedin: pere-miquel-brull-borràs
+  github: pmbrull
   email:
   twitter:
   google:
     ad-client:
     ad-slot:
   bio:
-  avatar: bio-photo.jpg # 160x160 px image for author byline
+  avatar: bio4.jpg # 160x160 px image for author byline
   disqus-shortname:
 
 

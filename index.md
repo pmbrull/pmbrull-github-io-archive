@@ -9,9 +9,6 @@ share: false
 
 ![png]({{ "/images/banner1.png" | absolute_url }})
 
-I'm a link
-### [Spark Series]({% link _pages/spark-series.md %}) 
+### [Spark Series]({% link _pages/spark-series.md %}){: .btn-big-inverse}
 
-I'm a button
-### [Spark Series]({% link _pages/spark-series.md %}){: .btn-inverse}
-blah blah blah
+
