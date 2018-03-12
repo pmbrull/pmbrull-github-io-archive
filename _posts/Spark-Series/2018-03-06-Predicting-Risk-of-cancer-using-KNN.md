@@ -1,8 +1,9 @@
 ---
-layout: article
+layout: single
 title: "Predicting Risk of cancer using KNN"
 date: 2018-03-08
 categories: spark-series
+author_profile: false
 mathjax: true
 plotly: true
 ---
@@ -241,7 +242,7 @@ print('Minimum number of Errors: {}'.format(min(T)))
 ```
 
 
-{% include /plotly/plotly_knn.html %}
+<!--{% include /plotly/plotly_knn.html %}-->
 
 
     Minimum number of False Positives: 4

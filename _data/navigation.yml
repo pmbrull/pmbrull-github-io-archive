@@ -1,16 +1,16 @@
-# Site navigation links
-
-- title: About
-  url: /about/
-  excerpt: "A little bit of this site and myself."
-  image:
-
-- title: Recent Posts
-  url: /recent-posts/
-  excerpt: "Recent typing I got time to do."
-  image:
-
-- title: Portfolio
-  url: /portfolio/
-  excerpt: "Things I've developed, struggled with or find interesting enough to share."
-  image:
+# main links
+main:
+  - title: About
+    url: /about/
+    excerpt: "A little bit of this site and myself."
+    image:
+  
+  - title: Recent Posts
+    url: /recent-posts/
+    excerpt: "Recent typing I got time to do."
+    image:
+  
+  - title: Portfolio
+    url: /portfolio/
+    excerpt: "Things I've developed, struggled with or find interesting enough to share."
+    image:

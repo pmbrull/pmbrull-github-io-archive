@@ -6,6 +6,6 @@ title: "Spark Series"
 
 <div class="tiles">
 {% for post in site.categories.spark-series %}
-	{% include post-grid.html %}
+	{% include archive-single.html %}
 {% endfor %}
 </div><!-- /.tiles -->

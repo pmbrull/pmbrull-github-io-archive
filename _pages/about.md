@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: single
 title:  "About"
 date:   2018-03-06
 permalink: /about/

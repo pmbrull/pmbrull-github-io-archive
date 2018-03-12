@@ -1,9 +1,11 @@
 ---
-layout: article
+layout: single
 title: "Spark GraphFrames I"
 date: 2018-03-08
 categories: spark-series
 mathjax: true
+toc: true
+author_profile: false
 ---
 
 Some information on how to get the GraphFrames module up and running on Windows and showing its funcionalities with some examples.
@@ -413,7 +415,7 @@ plot_graph(G.triplets.collect())
 ```
 
 
-![png]({{ "/assets/sparkgf1.png" | absolute_url }})
+![png]({{ "/assets/images/sparkgf1.png" | absolute_url }})
 
 
 And we end up with the following subgraph:
@@ -424,7 +426,7 @@ plot_graph(motif2.collect())
 ```
 
 
-![png]({{ "/assets/sparkgf2.png" | absolute_url }})
+![png]({{ "/assets/images/sparkgf2.png" | absolute_url }})
 
 
 ## Analyzing Wikipedia Articles Relevance
