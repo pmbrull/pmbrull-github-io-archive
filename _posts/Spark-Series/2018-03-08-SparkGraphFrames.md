@@ -431,7 +431,7 @@ plot_graph(G.triplets.collect())
 ```
 
 
-![png]({{ "/assets/images/sparkgf1.png" | absolute_url }})
+![png]({{ "/assets/images/sparkseries/sparkgf1.png" | absolute_url }})
 
 
 And we end up with the following subgraph:
@@ -442,7 +442,7 @@ plot_graph(motif2.collect())
 ```
 
 
-![png]({{ "/assets/images/sparkgf2.png" | absolute_url }})
+![png]({{ "/assets/images/sparkseries/sparkgf2.png" | absolute_url }})
 
 
 ## Analyzing Wikipedia Articles Relevance
