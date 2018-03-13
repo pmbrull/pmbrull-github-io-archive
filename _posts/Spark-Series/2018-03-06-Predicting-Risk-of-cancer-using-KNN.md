@@ -33,7 +33,8 @@ print('The file has {} lines.'.format(cancerRDD.count()))
 
 ```python
 header = cancerRDD.first()
-predictors = [x for x in header.split(',') if x not in ['id','diagnosis','train']]
+predictors = [x for x in header.split(',') 
+              if x not in ['id','diagnosis','train']]
 ```
 
 
@@ -56,7 +57,8 @@ trainRDD = splitRDD.filter(lambda f: f[32] == '1')
 testRDD = splitRDD.filter(lambda f: f[32] == '0')
 
 fullRDD = testRDD.cartesian(trainRDD)
-print('The cartesian product has {} lines.'.format(fullRDD.count()))
+print('The cartesian product has {} lines.'
+      .format(fullRDD.count()))
 ```
 
     The cartesian product has 65440 lines.
@@ -102,7 +104,8 @@ Let's operate over every value of each key and keep the tuple {distance,predicti
 
 
 ```python
-pred = distRDD.reduceByKey(lambda val1, val2: val1 if val1[0]<val2[0] else val2)\
+pred = distRDD.reduceByKey(lambda val1, val2: 
+                           val1 if val1[0]<val2[0] else val2)\
             .mapValues(lambda value: value[1])\
             .values()\
             .map(lambda x: (x,1))\
@@ -138,9 +141,11 @@ from collections import Counter
 
 ```python
 pred = distRDD.groupByKey()\
-            .mapValues(lambda vec: sorted(vec, key=lambda x: x[0])[:11])\
+            .mapValues(lambda vec: 
+                       sorted(vec, key=lambda x: x[0])[:11])\
             .mapValues(lambda vec: [x[1] for x in vec])\
-            .mapValues(lambda vec: Counter(vec).most_common(1)[0][0])\
+            .mapValues(lambda vec: 
+                       Counter(vec).most_common(1)[0][0])\
             .values()\
             .map(lambda x: (x,1))\
             .reduceByKey(lambda val1, val2: val1 + val2)\
@@ -169,9 +174,11 @@ T = []
 
 def generate_errors(K):
     pred = distRDD.groupByKey()\
-            .mapValues(lambda vec: sorted(vec, key=lambda x: x[0])[:K])\
+            .mapValues(lambda vec: 
+                       sorted(vec, key=lambda x: x[0])[:K])\
             .mapValues(lambda vec: [x[1] for x in vec])\
-            .mapValues(lambda vec: Counter(vec).most_common(1)[0][0])\
+            .mapValues(lambda vec: 
+                       Counter(vec).most_common(1)[0][0])\
             .values()\
             .map(lambda x: (x,1))\
             .reduceByKey(lambda val1, val2: val1 + val2)\
@@ -199,7 +206,9 @@ import plotly.graph_objs as go
 init_notebook_mode()
 
 _PLOTLY_CONFIG = {"displaylogo": False,
-                "modeBarButtonsToRemove": ["sendDataToCloud", "select2d", "lasso2d", "resetScale2d"]}
+                "modeBarButtonsToRemove": 
+                ["sendDataToCloud", "select2d", "lasso2d", 
+                 "resetScale2d"]}
 
 # Create traces
 trace0 = go.Scatter(
@@ -234,7 +243,8 @@ layout = go.Layout(
 )
 
 fig = go.Figure(data=data, layout=layout)
-iplot(fig, filename='KNN Errors', config=_PLOTLY_CONFIG, show_link=False)
+iplot(fig, filename='KNN Errors', config=_PLOTLY_CONFIG, 
+      show_link=False)
 
 print('Minimum number of False Positives: {}'.format(min(BM)))
 print('Minimum number of False Negatives: {}'.format(min(MB)))

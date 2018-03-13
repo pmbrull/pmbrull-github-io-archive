@@ -43,12 +43,12 @@ Copy this inside your the Spark directory: ```C:\Spark\spark-2.3.0-bin-hadoop2.7
 
 
 ```
- ---------------------------------------------------------------------
- |                  |            modules            ||   artifacts   |
- |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
- ---------------------------------------------------------------------
- |      default     |   5   |   0   |   0   |   0   ||   5   |   0   |
- ---------------------------------------------------------------------
+----------------------------------------------------------------
+|             |            modules            ||   artifacts   |
+|    conf     | number| search|dwnlded|evicted|| number|dwnlded|
+----------------------------------------------------------------
+|   default   |   5   |   0   |   0   |   0   ||   5   |   0   |
+----------------------------------------------------------------
 ```
 
 
@@ -162,12 +162,16 @@ people = peopleFile.filter(lambda l: l != peopleSchema)\
 likes = likesFile.filter(lambda l: l != likesSchema)\
     .map(lambda l: l.split(','))
     
-print('Schema for people (vertices) is: {}. For example: {}.'.format(peopleSchema, people.first()))
-print('Schema for likes (edges) is: {}. For example {}.'.format(likesSchema, likes.first()))
+print('Schema for people (vertices) is: {}. For example: {}.'
+      .format(peopleSchema, people.first()))
+print('Schema for likes (edges) is: {}. For example {}.'
+      .format(likesSchema, likes.first()))
 ```
 
-    Schema for people (vertices) is: id,name,age. For example: ['1', 'Alice', '28'].
-    Schema for likes (edges) is: src,dst,likes. For example ['2', '1', '7'].
+    Schema for people (vertices) is: id,name,age.
+      For example: ['1', 'Alice', '28'].
+    Schema for likes (edges) is: src,dst,likes.
+      For example ['2', '1', '7'].
     
 
 
@@ -201,13 +205,18 @@ Graph's edges and vertices are DataFrames that can be accessed (G.edges & G.vert
 print('G.vertices is a: {}. \n'.format(G.vertices))
 
 # vertices30 is also a DF
-vertices30 = G.vertices.select("name","age").filter(G.vertices.age > 30).orderBy("age", ascending=True)
+vertices30 = G.vertices.select("name","age")
+              .filter(G.vertices.age > 30)
+              .orderBy("age", ascending=True)
 
 # Collect and print:   
-print(*('{} is {}.'.format(x.name, x.age) for x in vertices30.rdd.collect()), sep='\n')
+print(*('{} is {}.'.format(x.name, x.age) 
+      for x in vertices30.rdd.collect()), sep='\n')
 ```
 
-    G.vertices is a: DataFrame[age: bigint, id: bigint, name: string]. 
+    G.vertices is a: DataFrame[age: bigint, 
+                               id: bigint, 
+                               name: string]. 
     
     David is 42.
     Fran is 50.
@@ -282,8 +291,9 @@ Filter now by users with more than 5 likes:
 ```python
 triplet = G.triplets.filter(G.triplets["edge"]["likes"] > 5).collect()
 
-print(*('{} loves {}.'.format(x["src"]["name"], x["dst"]["name"]) for x in 
-        sorted(triplet, key=lambda l: l["src"]["name"])), sep='\n')
+print(*('{} loves {}.'.format(x["src"]["name"], x["dst"]["name"]) 
+      for x in sorted(triplet, key=lambda l: l["src"]["name"])), 
+      sep='\n')
 ```
 
     Bob loves Alice.
@@ -313,8 +323,10 @@ print("The youngest user is {}, who is {} years old.".format(min_age_row[0]["nam
 likesReceived = G.inDegrees
 likesGiven = G.outDegrees
 
-InOut = G.vertices.join(likesReceived, G.vertices["id"]==likesReceived["id"], "left").drop(likesReceived.id)\
-                  .join(likesGiven, G.vertices["id"]==likesGiven["id"], "left").drop(likesGiven.id)\
+InOut = G.vertices.join(likesReceived, G.vertices["id"]==likesReceived["id"], "left")
+                  .drop(likesReceived.id)\
+                  .join(likesGiven, G.vertices["id"]==likesGiven["id"], "left")
+                  .drop(likesGiven.id)\
                   .collect()
         
 
@@ -322,8 +334,10 @@ InOut = G.vertices.join(likesReceived, G.vertices["id"]==likesReceived["id"], "l
 
 
 ```python
-print(*('{} has given {} likes and received {}.'.format(x["name"], x["outDegree"], x["inDegree"]).replace("None",'0')
-        for x in sorted(InOut, key=lambda l: l["name"])), sep='\n')
+print(*('{} has given {} likes and received {}.'
+      .format(x["name"], x["outDegree"], x["inDegree"])
+      .replace("None",'0')
+      for x in sorted(InOut, key=lambda l: l["name"])), sep='\n')
 ```
 
     Alice has given 0 likes and received 2.
@@ -355,9 +369,10 @@ Now, we would get a cycle. Note that it is also possible to omit aliases when no
 motif1 = G.find("(a)-[e]->(b); (b)-[e2]->(c); !(a)-[]->(c)")
 
 print(*('{} likes {}, and {} likes {}, so {} may like {}.'
-        .format(x["a"]["name"], x["b"]["name"], x["b"]["name"], x["c"]["name"],
-               x["a"]["name"], x["c"]["name"])
-        for x in sorted(motif1.collect(), key=lambda l: l["a"]["name"])), sep='\n')
+        .format(x["a"]["name"], x["b"]["name"], x["b"]["name"], 
+                x["c"]["name"], x["a"]["name"], x["c"]["name"])
+        for x in sorted(motif1.collect(), key=lambda l: l["a"]["name"])),
+        sep='\n')
 ```
 
     Charlie likes Bob, and Bob likes David, so Charlie may like David.
@@ -401,8 +416,9 @@ def plot_graph(df):
                           for x in df])
 
     # All together we can do something fancy
-    nx.draw(Gplot, with_labels=True, node_size=1500, node_color="skyblue", 
-            node_shape="o", alpha=0.5, linewidths=4, font_size=20, 
+    nx.draw(Gplot, with_labels=True, node_size=1500, 
+            node_color="skyblue", node_shape="o", 
+            alpha=0.5, linewidths=4, font_size=20, 
             font_color="grey", font_weight="bold", 
             width=2, edge_color="grey")
 ```
@@ -444,14 +460,13 @@ articles = articlesFile.map(lambda l: l.split('\t'))
     
 links = linksFile.map(lambda l: l.split('\t'))
     
-print('Schema for articles (vertices) is: {}'.format(articles.first()))
-print('Schema for links (edges) is: {}.'.format(links.first()))
+print('Schema for articles (vertices) is: {}'
+      .format(articles.first()))
+print('Schema for links (edges) is: {}.'
+      .format(links.first()))
 ```
-
     Schema for articles (vertices) is: ['6598434222544540151', 'Adelaide Hanscom Leeson']
     Schema for links (edges) is: ['36359329835505530', '6843358505416683693'].
-    
-
 
 ```python
 row_data_article = articles.map(lambda p: Row(
@@ -476,15 +491,15 @@ W = GF.GraphFrame(article_df, links_df)
 
 **PageRank** is one of the measures used by Google when listing web pages that indicates the web importance by accounting all the links refered to that specific page. Google paper citation:
 
- We assume page A has pages $T_1, \ldots , T_n$ which point to it (i.e., are citations). The parameter $d$ is a damping factor which can be set between 0 and 1. We usually set $d$ to 0.85. Also $C(A)$ is defined as the number of links going out of page A. The PageRank $PR$ of a page A is given as follows:
+ > We assume page A has pages $T_1, \ldots , T_n$ which point to it (i.e., are citations). The parameter $d$ is a damping factor which can be set between 0 and 1. We usually set $d$ to 0.85. Also $C(A)$ is defined as the number of links going out of page A. The PageRank $PR$ of a page A is given as follows:
 
  $$PR(A) = (1 - d) + d \times (PR(T_1) / C(T_1) + \ldots + PR(T_n)/C(T_n)).$$
 
- Note that the PageRanks form a probability distribution over web pages, so the sum of all web pages' PageRanks will be one.
+ > Note that the PageRanks form a probability distribution over web pages, so the sum of all web pages' PageRanks will be one.
 PageRank or $PR(A)$ can be calculated using a simple iterative algorithm, and corresponds to the principal eigenvector of the
 normalized link matrix of the web.
 
- PageRank or $PR(A)$ can be calculated using a simple iterative
+ > PageRank or $PR(A)$ can be calculated using a simple iterative
 algorithm, and corresponds to the principal eigenvector of the
 normalized link matrix of the web.
 
@@ -493,8 +508,10 @@ normalized link matrix of the web.
 # Run PageRank until convergence to tolerance "tol".
 results = W.pageRank(resetProbability=0.15, tol=0.01)
 # Display resulting pageranks and final edge weights
-# Note that the displayed pagerank may be truncated, e.g., missing the E notation.
-# In Spark 1.5+, you can use show(truncate=False) to avoid truncation.
+# Note that the displayed pagerank may be truncated, e.g., 
+# missing the E notation.
+# In Spark 1.5+, you can use show(truncate=False) 
+# to avoid truncation.
 results.vertices.select("id", "pagerank").show()
 results.edges.select("src", "dst", "weight").show()
 ```
