@@ -90,7 +90,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "PMBrull"
+  name             : "pmbrull"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Mathematician and Data enthusiast."
   location         : "Barcelona"
