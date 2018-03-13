@@ -242,7 +242,7 @@ print('Minimum number of Errors: {}'.format(min(T)))
 ```
 
 
-<!--{% include /plotly/plotly_knn.html %}-->
+{% include /plotly/plotly_knn.html %}
 
 
     Minimum number of False Positives: 4
