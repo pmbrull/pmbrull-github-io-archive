@@ -50,7 +50,7 @@ plot_figure_1()
 ![png](\assets\images\machinelearning\rf\output_4_0.png)
 
 
-### Boostrap
+### Bootsrap
 
 Given a dataset $D = \{ (x_1, t_1), \ldots, (x_n, t_n) \}$, we draw $m$ bootstrap **resamples** of size $n$ uniformly and with replacement, i.e we can get the same observation twice. For large $n$, it is expected that $1-1/e \approx 63.2\%$ of samples are unique, being the rest duplicates. We will fit a model on each of these $m$ resamples.
 
