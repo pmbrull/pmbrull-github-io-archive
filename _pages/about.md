@@ -26,6 +26,7 @@ Images used in the site are from [Unsplash](https://unsplash.com/). Kudos to the
 * Jeremy Bishop
 * Carlos Quintero
 * Rodion Kutsaev
+* Jamie Davies
 
 Icons come delivered by [The Noun Project](https://thenounproject.com/). Thanks to:
 
