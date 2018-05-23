@@ -10,7 +10,7 @@ main:
     excerpt: "Recent typing I got time to do."
     image:
   
-  - title: Portfolio
-    url: /portfolio/
+  - title: Home
+    url: /
     excerpt: "Things I've developed, struggled with or find interesting enough to share."
     image:
