@@ -11,7 +11,7 @@ toc: true
 
 With new technologies and problems to solve, new methodologies have appeared structuring *how* we face and solve these new projects. The most applied, or at least one of the most popular methodologies is **Agile**.
 
-## Story-time
+## Story time
 
 I had been working in a huge project - where huge means few years old project with big names behind - and I quite never felt the urge of taking the agile methods we implemented seriously, maybe because I was just getting started as a professional and facing other problems that kept my head busier, or maybe it was that the team was rather populated and it did not feel *agile* for me. However, with new projects appear new necessities, and now that I am working in a Big Data framework implementation (end-to-end data management and analytics) with just another colleague and a tight schedule comprised of 10 days *sprints*, I **must** know at what point we are to keep my brain at ease.
 
