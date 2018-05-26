@@ -13,4 +13,4 @@ Spark MLlib offers functions helping us implement Machine Learning algorithms. H
 
 And what about Dataframes and Datasets?
 
-In Python API we don't have such a problem, as one can only work with DataFrames, where a DF is just a Dataset where each row is accessed by the generic type **Row**. Same definition applies with Java, though there exists a separated Dataset object, where one needs to define a row container.
+In Python API we don't have such a problem, as one can only work with DataFrames, where a DF is just a Dataset and each row is accessed by the generic type **Row**. Same definition applies to Java, though there exists a separated Dataset object, where one needs to define a row container.
