@@ -12,7 +12,7 @@ locale                   : "en-US"
 title                    : "PMBRU\\\\"
 title_separator          : "-"
 name                     : "pmbrull"
-description              : "Data Science and Management blog :)"
+description              : "Data Science and Management blog"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -61,7 +61,7 @@ algolia:
   powered_by             : # true (default), false
 
 # SEO Related
-google_site_verification :
+google_site_verification : google964f9a6c59aab8b8
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
@@ -92,7 +92,7 @@ analytics:
 author:
   name             : "pmbrull"
   avatar           : "/assets/images/bio.jpg"
-  bio              : "Mathematician and Data enthusiast. Currently working at BaseTIS :)"
+  bio              : "Mathematician and Data enthusiast."
   location         : "Barcelona"
   email            : 
   uri              :

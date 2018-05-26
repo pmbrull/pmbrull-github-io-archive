@@ -11,7 +11,7 @@ I find it impossible to stay still or with my head quiet. I love learning and ke
 
 Another reason is that I greatly enjoy teaching, as it helps me organize all the concepts floating around in my mind: it forces you to build all the logic behind so that the speech makes sense. Also, one usually gets asked questions that he hadn't made before and trying to answer them turns on a light or two. <img src="/assets/images/light.png" style="width:25px;height:25px;"><img src="/assets/images/light.png" style="width:25px;height:25px;">
 
-I am studying a master degree in *Big Data Management, Technologies and Applications*, and some of the posts are my versions of the labs or my personal notebook on the lectures.
+I am studying a master degree in *Big Data Management, Technologies and Applications* at UPC School, and some of the posts are my versions of the labs or my personal notebook on the lectures.
 
 
 ### Credits
