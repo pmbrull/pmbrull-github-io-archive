@@ -61,7 +61,7 @@ algolia:
   powered_by             : # true (default), false
 
 # SEO Related
-google_site_verification : google964f9a6c59aab8b8
+google_site_verification : google964f9a6c59aab8b8.html
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
