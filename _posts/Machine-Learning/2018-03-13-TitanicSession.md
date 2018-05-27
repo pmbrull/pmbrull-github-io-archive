@@ -8,19 +8,6 @@ mathjax: true
 toc: true
 ---
 
-- **1 Introduction**
-- **2 Exploratory Analysis**
-    - Data visualization
-    - Oulier detection
-    - Working with missing values
-- **3 Feature Engineering**
-    - Hidden information
-    - Combining variables
-- **4 Modelling**
-    - Hyperparameter tuning
-
-## Introduction
-
 The purpose of this Notebook is to give an end-to-end workflow example when aiming to solve a Machine Learning problem. The data used is taken from [Kaggle](https://www.kaggle.com/c/titanic/data). 
 
 It is vital to always understand the different variables that are given to us, and even more when working with small dimentions like in this case, where we will try to extract *hidden* information and take advantage of this knowledge to extract more powerful features than the raw ones.  

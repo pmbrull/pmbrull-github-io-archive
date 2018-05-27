@@ -9,7 +9,6 @@ mathjax: true
 toc: true
 ---
 
-## Introduction
 
 Spark MLlib offers functions helping us implement Machine Learning algorithms. However, these algorithms require to have a solution or aproximation when being applied in parallel in a cluster, i.e they need to support horizontal scaling. A fine example of that would be Distributed Random Forests. We will use versions greater than 2.0, from which the API started to be based on Datasets/Dataframes and not just RDDs. The main difference here is that, while both RDDs and Datasets/Dataframes are immutable distributed collection of elements of your data, Datasets/Dataframes have data organized in a tabular schema with structure defined when created (names and types).
 
