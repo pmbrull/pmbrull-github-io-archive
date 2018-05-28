@@ -228,6 +228,6 @@ bd = trello_burndown(client, '<board-name>',
 bd.go_through_steps()
 ```
 
-![png](/assets/images/pythontricks/agileI/output1.png)
+![png]({{ "/assets/images/agileI/output1.png" | absolute_url }})
 
 Hope you enjoyed it and found it useful. There are still much more project workload feedback and statistics one can extract using this API that might be fun to automatize (and maybe I'll do it!).
