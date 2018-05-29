@@ -13,6 +13,7 @@ In last post we introduced py-trello API and showed one way of quickly getting a
 
 ![png]({{ "/assets/images/pythontricks/agileII/burndown_bad.png" | absolute_url }})
 
+
 And also missleading. 
 
 Problem here is that we are taking into account weekends, which in this graph act like we had several days without obtaining any results. Let's try to change this behaviour and only use workdays to have a vision that better fits reality. Another option could be only using days with card movement, assuming that, as we are working full time in these tasks, someone on the team will at least finish an easy task.
@@ -56,10 +57,14 @@ optim_trace = go.Scatter(x=list(range(len(optimal.index))),
 
 Again, there may be better workarounds, but nevertheless, this one works and we can from this:
 
+
 ![png]({{ "/assets/images/pythontricks/agileII/burndown_bad.png" | absolute_url }})
+
 
 To this:
 
+
 ![png]({{ "/assets/images/pythontricks/agileII/burndown_good.png" | absolute_url }})
+
 
 Still, note how third data point is still blank. This is because it was a holiday in Barcelona :) Python has some tools to import festivities and even tune your own calendar, but I'll leave that for another day.
