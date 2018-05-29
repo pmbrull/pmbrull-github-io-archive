@@ -20,7 +20,7 @@ Problem here is that we are taking into account weekends, which in this graph ac
 
 It has taken a while, as even when discarding weekends in the time series objects, those days are still shown in the plot. Finally, I came up with a solution that might not be the most elegant but gives us a better idea of the project's real state.
 
-* When defining the class index, add *frequence* only business days:
+When defining the class index, add *frequence* only business days:
 
 ```python
 from pandas.tseries.offsets import BDay
@@ -32,27 +32,27 @@ self.index = pd.date_range(start=start_sprint,
 
 Which elimininates weekends when creating the Time Series storing the points.
 
-* Instead of generating the Optimal Time Series with just sprint start and end points, with values of all_points and 0, use numpy **linspace** function to actually inform all points of interest.
+Instead of generating the Optimal Time Series with just sprint start and end points, with values of all_points and 0, use numpy **linspace** function to actually inform all points of interest.
 
 ```python
 optim_val = np.linspace(self.all_points, 0, len(self.index))
 optimal = pd.Series(optim_val, index=self.index)
 ```
 
-* Now we have our data clean! However, plotly still gives us headaches as when using timestamps on x-axis, not even passed data points have their dates drawn. There is a [discussion](https://github.com/plotly/plotly.js/issues/99) going on about auto-formatting this issue, but i decided to go straight-forward and convert types. New traces have x-axis changed to integer list and look like this:
+Now we have our data clean! However, plotly still gives us headaches as when using timestamps on x-axis, not even passed data points have their dates drawn. There is a [discussion](https://github.com/plotly/plotly.js/issues/99) going on about auto-formatting this issue, but i decided to go straight-forward and convert types. New traces have x-axis changed to integer list and look like this:
 
 ```python
 real_trace = go.Scatter(x=list(range(len(self.ts.index))), 
                         y=self.ts,
                         name='Remaining points',
-                        line = dict(color = '#17BECF'),
-                        opacity = 0.8)
+                        line=dict(color = '#17BECF'),
+                        opacity=0.8)
 
 optim_trace = go.Scatter(x=list(range(len(optimal.index))),
                          y=optimal,
                          name='Optimal points',
                          line=dict(color='#7F7F7F'),
-                         opacity = 0.8)
+                         opacity=0.8)
 ```
 
 Again, there may be better workarounds, but nevertheless, this one works and we can from this:
