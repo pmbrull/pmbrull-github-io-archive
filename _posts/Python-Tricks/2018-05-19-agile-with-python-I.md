@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Agile methodology with Python (I)"
+title: "Agile methodology with Python (Part I)"
 date: 2018-05-19
 categories: python-tricks
 tags: agile python trello story-time API graph plotly
