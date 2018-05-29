@@ -45,7 +45,7 @@ Now we have our data clean! However, plotly still gives us headaches as when usi
 real_trace = go.Scatter(x=list(range(len(self.ts.index))), 
                         y=self.ts,
                         name='Remaining points',
-                        line=dict(color = '#17BECF'),
+                        line=dict(color='#17BECF'),
                         opacity=0.8)
 
 optim_trace = go.Scatter(x=list(range(len(optimal.index))),

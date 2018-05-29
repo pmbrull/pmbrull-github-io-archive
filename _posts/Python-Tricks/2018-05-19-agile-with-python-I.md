@@ -196,7 +196,7 @@ class trello_burndown:
         real_trace = go.Scatter(x=self.ts.index, 
                         y=self.ts,
                         name='Remaining points',
-                        line=dict(color = '#17BECF'),
+                        line=dict(color='#17BECF'),
                         opacity=0.8)
         optim_trace = go.Scatter(x=optimal.index,
                         y=optimal,
