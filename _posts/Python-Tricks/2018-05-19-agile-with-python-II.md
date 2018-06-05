@@ -11,7 +11,7 @@ mathjax: true
 In last post we introduced py-trello API and showed one way of quickly getting a BurnDown chart on any Trello board we want, specifying in which cards we have positive and finished points. However, in the way we implemented it last time things can be scary...
 
 
-![png]({{ "/assets/images/pythontricks/agileII/burndown_bad.png" | absolute_url }})
+![png]({{ "/assets/images/pythontricks/agileII/burndown_bad.PNG" | absolute_url }})
 
 
 And also missleading. 
@@ -58,13 +58,13 @@ optim_trace = go.Scatter(x=list(range(len(optimal.index))),
 Again, there may be better workarounds, but nevertheless, this one works and we can from this:
 
 
-![png]({{ "/assets/images/pythontricks/agileII/burndown_bad.png" | absolute_url }})
+![png]({{ "/assets/images/pythontricks/agileII/burndown_bad.PNG" | absolute_url }})
 
 
 To this:
 
 
-![png]({{ "/assets/images/pythontricks/agileII/burndown_good.png" | absolute_url }})
+![png]({{ "/assets/images/pythontricks/agileII/burndown_good.PNG" | absolute_url }})
 
 
 Still, note how third data point is still blank. This is because it was a holiday in Barcelona :) Python has some tools to import festivities and even tune your own calendar, but I'll leave that for another day.
