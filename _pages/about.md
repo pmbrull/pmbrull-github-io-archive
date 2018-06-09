@@ -27,6 +27,7 @@ Images used in the site are from [Unsplash](https://unsplash.com/). Kudos to the
 * Carlos Quintero
 * Rodion Kutsaev
 * Jamie Davies
+* Josh Rose
 
 Icons come delivered by [The Noun Project](https://thenounproject.com/). Thanks to:
 
