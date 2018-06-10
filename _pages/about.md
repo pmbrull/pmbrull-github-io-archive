@@ -18,7 +18,9 @@ I am studying a master degree in *Big Data Management, Technologies and Applicat
 
 The main theme is built on jekyll by Michael Rose: [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/).
 
-Some amazing graphic functions implemented in python are extracted from Python Data Sciende Handbook. Amazing material!
+Using draw.io for creating diagrams showing concepts.
+
+Some graphic functions implemented in python are extracted from Python Data Sciende Handbook. Amazing material!
 
 Images used in the site are from [Unsplash](https://unsplash.com/). Kudos to the artists:
 

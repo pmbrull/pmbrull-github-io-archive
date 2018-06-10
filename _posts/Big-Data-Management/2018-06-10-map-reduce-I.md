@@ -3,7 +3,7 @@ layout: single
 title: "MapReduce (Part I)"
 date: 2018-06-10
 categories: big-data-management
-tags: bigdata management mapreduce intro depth
+tags: bigdata management mapreduce intro depth map reduce
 author_profile: false
 mathjax: true
 ---
@@ -43,12 +43,13 @@ The whole process comprises
 4. Performing the reduce operation.
 5. Writting results on disk.
 
-## Merge-Sort
+## Merge-Sort: Shuffling
 
 It's a recursive algorithm that splits data into $n$ parts that can fit in memory and order each of those parts. Then, partitions get compared by pairs and *merged*, ending up with $n/2$ ordered partitions and so on (the gif in [wikipedia](https://en.wikipedia.org/wiki/Merge_sort) is very illustrative). 
 
-Using this kind of sorting allows for easy parallelization, so data can be treated separatedly by the **map workers**, then results sorted by key and passed into the **reduce workers**, that can perform *sequential access* on elements with same key as they end up all together.
+Using this kind of sorting allows for easy parallelization, so data can be treated separatedly by the **map workers**, then results sorted by key and accessed by the **reduce workers**, that can perform *sequential access* on elements with same key as they end up all together.
 
+> Note that after the Map phase, data is written to local disk sorted, Reducer reads that data remotely and after the Reduce phase, we are writting to disk again.
 
 ## Example
 
