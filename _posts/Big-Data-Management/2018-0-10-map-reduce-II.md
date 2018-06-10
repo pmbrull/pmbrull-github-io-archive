@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "MapReduce (Part II)"
-date: 2018-06-10
+date: 2018-06-10 19:00:00
 categories: big-data-management
 tags: bigdata management mapreduce depth map reduce
 author_profile: false

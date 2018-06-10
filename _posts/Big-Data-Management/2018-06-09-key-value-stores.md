@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Key-Value Stores"
-date: 2018-06-09
+date: 2018-06-09 16:00:00
 categories: big-data-management
 tags: bigdata management mapreduce key-value intro
 author_profile: false
