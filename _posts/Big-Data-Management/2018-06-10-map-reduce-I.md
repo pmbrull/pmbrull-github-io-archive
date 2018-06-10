@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "MapReduce (Part I)"
-date: 2018-06-09
+date: 2018-06-10
 categories: big-data-management
 tags: bigdata management mapreduce intro depth
 author_profile: false
@@ -67,3 +67,12 @@ However, if I want to know how many items I have sold in each department:
 ![examplereduce2]({{ "/assets/images/bigdatamanagement/reduce2.png" | absolute_url }})
 
 I need to specify the department as key and count the length of the array in the reduce.
+
+## Benefits
+
+1. Progamming simple model.
+2. Does not assume any data structure, we are free to play around.
+3. Scalable: distribution and parallelism has no effect in the code. 
+4. Tries to execute the map localy (query shipping vs. data shipping).
+5. Balances worload (but never further than what the built HDFS allows for).
+6. Provides fault tolerance: If a chunk of data fails in the execution, we just need to execute that chunk again, the other chunks are saved in disk.
