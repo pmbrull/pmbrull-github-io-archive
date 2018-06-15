@@ -76,9 +76,3 @@ Process where the main() method of the program runs. It runs the user code that 
 
 ![summary]({{ "/assets/images/bigdatamanagement/spark2.png" | absolute_url }})
 
-## Shuffle
-
-This is an important part of Spark's design: we have data distributed accross the cluster, so how can we apply key-dependant operations when tuples are located in different executors?
-
-![shuffle]({{ "/assets/images/bigdatamanagement/spark3.png" | absolute_url }})
-
