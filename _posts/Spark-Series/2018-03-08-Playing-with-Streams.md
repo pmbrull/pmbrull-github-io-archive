@@ -2,7 +2,8 @@
 layout: single
 title: "Playing with Streams"
 date: 2018-06-16
-categories: spark-series kafka stream maven job ubuntu
+categories: spark-series
+tags: spark kafka stream maven job ubuntu
 author_profile: false
 mathjax: true
 plotly: true
