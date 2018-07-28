@@ -6,7 +6,7 @@ categories: spark-series
 tags: spark python jupyter cheatsheet
 author_profile: false
 mathjax: true
-toc: true
+toc: false
 ---
 
 I was trying to get everything set up for working in the Master's final project. It was a while since I last used python with Spark, and when I did, I simply used the godly
