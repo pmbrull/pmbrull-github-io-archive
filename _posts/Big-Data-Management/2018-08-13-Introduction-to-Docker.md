@@ -11,7 +11,7 @@ toc: false
 
 Big data architectures are usually characterized for being loosely-coupled systems, meaning that one has to individually build up and configure each different part of the needed resources for the data ingestion, storage and processing and also their connection, so that everything can run as a whole. 
 
-Contrary to old relational architectures, where the you could deploy an already prepared system, with big data each part has to fulfill a strict need in a very specific way. That's why there is no single product capable of reaching a global solution for this newborn paradigm called big data, but rather hundreds of small pieces to achieve the major goal.
+Contrary to old relational architectures, where you could deploy an already prepared system, with big data each part has to fulfill a strict need in a very specific way. That's why there is no single product capable of reaching a global solution for this newborn paradigm called big data, but rather hundreds of small pieces to achieve the major goal.
 
 This means that the final system will be built upon different blocks that need to correctly communicate with each other and with the cluster. For example: A process listening to an event that triggers a function that reads stored data and performs a given computation that has to be received by yet another part of the system. A problem here arises by the developer's needs of changing and improving the final product, which usually means interacting with just a part of the whole process and, mainly, avoiding this updates to have side effects on all the grids.
 
