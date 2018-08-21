@@ -9,8 +9,6 @@ mathjax: false
 toc: false
 ---
 
-# Docker's Multi-container Environments
-
 In last posts of this Docker series, we saw a motivation about this technology and also a brief introduction into both its terms and practices. We managed containers from the registry and also built our own images playing around with Dockerfiles. However, not everything is as simple as preparing a single container getting all the work done. Although being already useful, there usually are dependencies among many other parts of the same applications (and even more in a big data environment as we are talking about loosely-coupled systems), and Docker brings us a way to comfortably handle those needs.
 
 In this post, we are going to introduce Multi-Container Environments, how to prepare them and how they are able to talk to each other flawlessly. Again, this is just me putting my head together around this incredible [tutorial](https://docker-curriculum.com/), where you will find further examples and explanations, so a big thank you to the author! That post is kind of a life saver as we are also using ElasticSearch in the master's degree thesis (more on that [here](https://pmbrull.github.io/big-data-management/elasticsearch-as-db-of-choice/)), so we'll go through the ES with Docker part as well :)
