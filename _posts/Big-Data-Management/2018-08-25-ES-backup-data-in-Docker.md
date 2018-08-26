@@ -148,7 +148,7 @@ pmbrull@pmbrull-GE62-6QD:~$ curl localhost:9200
 
 
 
-## Backup Data
+## 3. Backup Data
 
 Everything went on flawlessly! We now need to repeat the step of registering the snapshot directory:
 
@@ -194,5 +194,5 @@ curl -XGET 'localhost:9200/sopas-pures-y-caldos/_search?search_type=scan&scroll=
 }'
 ```
 
-It actually took me some time and lot's of StackOverflow surfing to get to this solution, so I hope this helps someone :)
+more time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admiIt actually took me some time and lot's of StackOverflow surfing to get to this solution, so I hope this helps someone :)
 
