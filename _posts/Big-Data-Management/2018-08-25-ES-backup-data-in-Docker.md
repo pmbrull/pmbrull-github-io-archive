@@ -194,5 +194,5 @@ curl -XGET 'localhost:9200/sopas-pures-y-caldos/_search?search_type=scan&scroll=
 }'
 ```
 
-more time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admimore time that I would want to admiIt actually took me some time and lot's of StackOverflow surfing to get to this solution, so I hope this helps someone :)
+It actually took me some time and lot's of StackOverflow surfing to get to this solution, so I hope this helps someone :)
 
