@@ -140,7 +140,7 @@ ENTRYPOINT ["python", "./query.py"]
 
 Finally, we should have our working directory looking like this:
 
-```con
+```bash
 pmbrull@pmbrull-GE62-6QD:~/$ tree py-query/
 py-query/
 ├── Dockerfile
