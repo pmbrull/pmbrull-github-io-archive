@@ -70,7 +70,7 @@ The main part here would be on which IP address is the container allocated. We c
 docker network create my-net
 ```
 
-We then can tell the container in which network to connect by applying the `--netmy-net` flag on the `run` command. This way, when we have all our containers running under the same roof, connecting to ES database in Python would be as simple as
+We then can tell the container in which network to connect by applying the `--net my-net` flag on the `run` command. This way, when we have all our containers running under the same roof, connecting to ES database in Python would be as simple as
 
 ```python
 es = Elasticsearch(host='es')

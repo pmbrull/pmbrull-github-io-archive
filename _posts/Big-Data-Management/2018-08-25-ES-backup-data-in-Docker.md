@@ -118,7 +118,7 @@ docker build --tag=es-custom .
 Then, start it as we have done [before](https://pmbrull.github.io/big-data-management/Multi-container-Environments/):
 
 ```
-sudo docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" es-custom
+docker run -d --name es -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" es-custom
 ```
 
 Before going further, let's check that we haven't messed it up somewhere, so we can try to talk to the container:
