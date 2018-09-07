@@ -6,7 +6,7 @@ categories: big-data-management
 tags: bigdata management docker hbase elasticsearch python
 author_profile: false
 mathjax: false
-toc: true
+toc: false
 ---
 
 So far we have been setting up the ingredients to finally being able to prepare a process capable of reaching data of two different NoSQL databases, each one mounted as a Docker container. Summing up, there are four major pillars holding our application:
