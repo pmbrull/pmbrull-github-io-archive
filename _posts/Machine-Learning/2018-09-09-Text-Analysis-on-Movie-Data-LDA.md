@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Text Analysis on Movie Data - LDA"
-date: 2018-05-13
+date: 2018-09-09
 categories: machine-learning
 tags: machine-learning text analysis movie plotly
 author_profile: false
