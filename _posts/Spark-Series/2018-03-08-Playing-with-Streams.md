@@ -63,7 +63,7 @@ To start the master node, which will run on localhost:
 /usr/local/spark/sbin/start-master.sh
 ```
 
-The, go to localhost:8080 to open the Spark's UI to check everything went down smoothly. However, we are not satisfied with a master. We want a cluster!
+Then, go to localhost:8080 to open the Spark's UI to check everything went down smoothly. However, we are not satisfied with a master. We want a cluster!
 
 Thus, let's change some configurations. On the conf/ directory:
 
