@@ -20,7 +20,7 @@ The main theme is built on jekyll by Michael Rose: [Minimal Mistakes](https://ma
 
 Using draw.io for creating diagrams showing concepts.
 
-Some graphic functions implemented in python are extracted from Python Data Sciende Handbook. Amazing material!
+Some graphic functions implemented in python are extracted from Python Data Science Handbook. Amazing material!
 
 Images used in the site are from [Unsplash](https://unsplash.com/). Kudos to the artists:
 
